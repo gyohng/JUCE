@@ -78,6 +78,8 @@ else()
             "-DCMAKE_BUILD_TYPE=Debug"
             "-DJUCE_BUILD_HELPER_TOOLS=ON"
             "-DCMAKE_INSTALL_PREFIX=${CMAKE_INSTALL_PREFIX}"
+            "-DCMAKE_C_COMPILER_LAUNCHER=ccache"
+            "-DCMAKE_CXX_COMPILER_LAUNCHER=ccache"
             ${extra_configure_flags}
         WORKING_DIRECTORY "${JUCE_SOURCE_DIR}"
         OUTPUT_VARIABLE command_output
